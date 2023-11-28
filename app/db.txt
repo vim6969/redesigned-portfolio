@@ -1,0 +1,352 @@
+cardContentForSvg1 = {
+    title:'About Me',
+    description:'Hey there! I'm Vimanshu, a passionate full-stack software developer
+                with a knack for crafting stunning user interfaces. My expertise
+                revolves around React and Next.js, where I delve into creating
+                sleek, minimalistic frontend designs that captivate and simplify
+                user experiences.',
+    extraInfo:{
+        infoTitle:['My Socials','Email']
+
+    }
+}
+
+    <div
+        className={`${
+          iconSelected && atBottom === true ? "" : "grid grid-cols-2"
+        } md:flex justify-center items-center mt-[30%]`}
+      >
+        <div className="m-8 relative">
+          <Image
+            src={icon1}
+            width={150}
+            className={`alien-about-me floatingSVG SVG 
+          ${atBottom ? "focusedSVG" : ""} 
+          ${
+            iconSelected !== "alien-about-me" &&
+            iconSelected &&
+            atBottom === true
+              ? "hidden"
+              : ""
+          }`}
+            onClick={handleCardToogle}
+          />
+          {atBottom ? (
+            <audio autoPlay>
+              <source src="/sounds/click.wav" type="audio/wav" />
+            </audio>
+          ) : (
+            ""
+          )}
+        </div>
+        {/* ------------card display logic--------------- */}
+        <div
+          className={`card ${atBottom ? "bottomCard" : ""} ${
+            showFullCard ? "full-card" : ""
+          }`}
+          onClick={handleCardSwipe}
+        >
+          {/* ------------card display logic ends--------------- */}
+          {/* content for the card */}
+          <div className="card-content">
+            <div className="flex justify-evenly mt-3 font-light">
+              <p className="text-white text-3xl">About Me</p>
+              <button
+                className="text-white text-3xl font-thin"
+                onClick={handleX}
+              >
+                X
+              </button>
+              {clickedX ? (
+                <audio autoPlay>
+                  <source src="/sounds/close.wav" type="audio/wav" />
+                </audio>
+              ) : (
+                ""
+              )}
+            </div>
+            <p className="text-xl text-white mx-4 mt-2 font-light leading-loose ">
+              Hey there! I'm Vimanshu, a passionate full-stack software
+              developer with a knack for crafting stunning user interfaces. My
+              expertise revolves around React and Next.js, where I delve into
+              creating sleek, minimalistic frontend designs that captivate and
+              simplify user experiences.
+            </p>
+            {/* info with a border at bottom */}
+            <div className="flex justify-between text-white font-thin mt-12 mx-8">
+              <p>My Socials</p>
+              <div className="flex justify-between">
+                <Image src={insta} width={25} height={25} className="mr-3" />
+                <Image src={linkedin} width={25} height={25} />
+              </div>
+            </div>
+            {/* border sample */}
+            <div className="border-b mx-4 mt-2 opacity-50"></div>
+            {/* info with a border at bottom */}
+            <div className="flex justify-between text-white font-thin mt-12 mx-8">
+              <p>Email</p>
+              <div className="flex justify-between">
+                <p>vimanshuchandra@icloud.com</p>
+              </div>
+            </div>
+            {/* border sample */}
+            <div className="border-b mx-4 mt-2 opacity-50"></div>
+          </div>
+        </div>
+        {/*----------- icon2 ----------- */}
+        <div className="m-8 relative">
+          <Image
+            src={icon2}
+            width={150}
+            className={`paint-projects floatingSVG SVG ${
+              iconSelected &&
+              iconSelected !== "paint-projects" &&
+              atBottom === true
+                ? "hidden"
+                : ""
+            } `}
+            onClick={handleCardToogle}
+          />
+        </div>
+        {/*----------- icon3 ----------- */}
+
+        <div className="m-8 relative">
+          <Image
+            src={icon3}
+            width={150}
+            className={`glass-ball-skills floatingSVG SVG ${
+              iconSelected &&
+              iconSelected !== "glass-ball-skills" &&
+              atBottom === true
+                ? "hidden"
+                : ""
+            }`}
+            onClick={handleCardToogle}
+          />
+        </div>
+        {/*----------- icon4 ----------- */}
+
+        <div className="m-8 relative">
+          <Image
+            src={icon4}
+            width={150}
+            className={`heart-hobbies floatingSVG SVG ${
+              iconSelected &&
+              iconSelected !== "heart-hobbies" &&
+              atBottom === true
+                ? "hidden"
+                : ""
+            }`}
+            onClick={handleCardToogle}
+          />
+        </div>
+        {/*----------- icon5 ----------- */}
+
+        <div className="m-8 relative">
+          <Image
+            src={icon5}
+            width={150}
+            className={`stone-face-experience floatingSVG SVG ${
+              iconSelected &&
+              iconSelected !== "stone-face-experience" &&
+              atBottom === true
+                ? "hidden"
+                : ""
+            }`}
+            onClick={handleCardToogle}
+          />
+        </div>
+        {/*----------- icon6 ----------- */}
+
+        <div className="m-8 relative ">
+          <Image
+            src={icon6}
+            width={150}
+            className={`cloud-contact floatingSVG SVG ${
+              iconSelected &&
+              iconSelected !== "cloud-contact" &&
+              atBottom === true
+                ? "hidden"
+                : ""
+            }`}
+            onClick={handleCardToogle}
+          />
+        </div>
+        </div>
+
+const iconsInfo = {
+    1:{
+    Svg:icon1,
+    SvgClassName:'alien-about-me',
+    title: "About Me",
+    description:
+      "Hey there! I'm Vimanshu, a passionate full-stack software developer with a knack for crafting stunning user interfaces. My expertise revolves around React and Next.js, where I delve into creating sleek, minimalistic frontend designs that captivate and simplify user experiences.",
+    extraInfo: {
+      infoTitle: ["My Socials", "Email"],
+    },
+  },
+   2:{
+    Svg:icon2,
+    SvgClassName:'alien-about-me',
+    title: "About Me",
+    description:
+      "Hey there! I'm Vimanshu, a passionate full-stack software developer with a knack for crafting stunning user interfaces. My expertise revolves around React and Next.js, where I delve into creating sleek, minimalistic frontend designs that captivate and simplify user experiences.",
+    extraInfo: {
+      infoTitle: ["My Socials", "Email"],
+   },
+  },
+   3:{
+    Svg:icon3,
+    SvgClassName:'alien-about-me',
+    title: "About Me",
+    description:
+      "Hey there! I'm Vimanshu, a passionate full-stack software developer with a knack for crafting stunning user interfaces. My expertise revolves around React and Next.js, where I delve into creating sleek, minimalistic frontend designs that captivate and simplify user experiences.",
+    extraInfo: {
+      infoTitle: ["My Socials", "Email"],
+   },
+  },
+   4:{
+    Svg:icon4,
+    SvgClassName:'alien-about-me',
+    title: "About Me",
+    description:
+      "Hey there! I'm Vimanshu, a passionate full-stack software developer with a knack for crafting stunning user interfaces. My expertise revolves around React and Next.js, where I delve into creating sleek, minimalistic frontend designs that captivate and simplify user experiences.",
+    extraInfo: {
+      infoTitle: ["My Socials", "Email"],
+   },
+  },
+   5:{
+    Svg:icon5,
+    SvgClassName:'alien-about-me',
+    title: "About Me",
+    description:
+      "Hey there! I'm Vimanshu, a passionate full-stack software developer with a knack for crafting stunning user interfaces. My expertise revolves around React and Next.js, where I delve into creating sleek, minimalistic frontend designs that captivate and simplify user experiences.",
+    extraInfo: {
+      infoTitle: ["My Socials", "Email"],
+   },
+  },
+   6:{
+    Svg:icon6,
+    SvgClassName:'alien-about-me',
+    title: "About Me",
+    description:
+      "Hey there! I'm Vimanshu, a passionate full-stack software developer with a knack for crafting stunning user interfaces. My expertise revolves around React and Next.js, where I delve into creating sleek, minimalistic frontend designs that captivate and simplify user experiences.",
+    extraInfo: {
+      infoTitle: ["My Socials", "Email"],
+   }
+
+  }
+
+  };
+
+{/* ------------card display logic--------------- */}
+className={`${clickedX && !iconSelected && iconSelected!=='Paint-projects'? `hidden` :`${isMobile?'card':'side-card'}`} 
+            ${atBottom && iconSelected==='Paint-projects' &&showFullCard===false? "bottomCard" : ""}
+            ${showFullCard && iconSelected==='Paint-projects' && clickedX===false? "full-card" : ""}`}
+            onClick={handleCardSwipe}
+
+
+audio component
+  {atBottom ? (
+              <audio autoPlay>
+                <source src="/sounds/click.wav" type="audio/wav" />
+              </audio>
+            ) : (
+              ""
+            )}
+    {clickedX ? (
+                  <audio autoPlay>
+                    <source src="/sounds/close.wav" type="audio/wav" />
+                  </audio>
+                ) : (
+                  ""
+                )}
+
+
+
+
+
+
+
+<div className="third-icon">
+      <div className="">
+          <div className="m-8 relative ">
+            <Image
+              src={icon3}
+              width={150}
+              className={`crystal-ball-skills SVG floatingSVG
+                ${atBottom? "focusedSVG" : ""} 
+                ${
+                  iconSelected ==='crystal-ball-skills' ||
+                  iconSelected === '' ||
+                  !iconClicked
+                    ? ""
+                    : "hidden"
+                }`}
+              onClick={handleCardToogle}
+            />
+            
+          </div>
+          {/* ------------card display logic--------------- */}
+        
+          <div
+            className={
+              // what to display card or side card
+            `${iconSelected==='crystal-ball-skills'?`${isMobile?'card':'side-card'}`:`hidden`} 
+            ${isMobile && showFullCard?'full-card':''}
+            ${iconSelected==='' || iconClicked===false? `hidden` : '' } 
+           `}
+            onClick={handleCardSwipe}
+          >
+            {/* ------------card display logic ends--------------- */}
+            
+            {/*--------------- content for the card -----------------------------------------------------*/}
+            
+            <div className={``}>
+              <div className="flex justify-center items-center ">
+                <p className="text-3xl scale-x-150 text-white">-</p>
+              </div>
+              <div className="flex justify-center items-center  font-light">
+                <p className="text-white text-3xl">My Skills</p>
+              </div>
+              <p className="text-xl text-white mx-4 mt-2 font-light leading-loose ">
+               I excel in crafting dynamic web applications with proficiency in React.js and Next.js, ensuring seamless user experiences through sleek interfaces. My expertise extends to frontend development using HTML, CSS, and JavaScript, where I implement clean, responsive designs. I leverage the power of UI frameworks like Tailwind CSS and Bootstrap to create visually striking yet functional interfaces. Additionally, my backend proficiency in Node.js allows me to build robust, scalable solutions that complement the frontend seamlessly.
+              </p>
+              {/* info with a border at bottom */}
+              <div className="flex justify-between text-white font-thin mt-12 mx-8">
+                <p>Frontend</p>
+                <div className="flex justify-between">
+                  <p>React.js</p>
+                  <p>Next.js</p>
+                  <p>HTML/CSS</p>
+                  <p>Javascript</p>
+                </div>
+              </div>
+              {/* border sample */}
+              <div className="border-b mx-4 mt-2 opacity-50"></div>
+              {/* info with a border at bottom */}
+              <div className="flex justify-between text-white font-thin mt-12 mx-8">
+                <p>UI frameworks</p>
+                <div className="flex justify-between">
+                  p>Tailwind</p>
+                  <p>CSS</p>
+                  <p>Bootstrap</p>
+                </div>
+              </div>
+              {/* border sample */}
+              <div className="border-b mx-4 mt-2 opacity-50"></div>
+              {/* info with a border at bottom */}
+              <div className="flex justify-between text-white font-thin mt-12 mx-8">
+                <p>Backend</p>
+                <div className="flex justify-between">
+                  p>Node.js</p>
+                  
+                </div>
+              </div>
+              {/* border sample */}
+              <div className="border-b mx-4 mt-2 opacity-50"></div>
+            </div>
+            {/*--------------- content for the card ends-----------------------------------------------------*/}
+          </div>
+      </div>
+    </div>
